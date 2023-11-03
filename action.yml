@@ -1,4 +1,4 @@
-name: "SSH over WireGuard"
+name: "SSH over WireGuard beta"
 description: "SSH to your private servers over WireGuard VPN."
 branding:
   icon: "lock"
@@ -28,9 +28,9 @@ runs:
     - run: ${{ github.action_path }}/runner.sh
       shell: bash
       env:
-        SSH_USER: ${{ inputs.peer_port }}
-        SSH_PORT: ${{ inputs.peer_ip }}
-        SSH_HOST: ${{ inputs.github_ip }}
-        SSH_KEY: ${{ inputs.ssh_public_key }}
-        SSH_CONF: ${{ inputs.ssh_connection_timeout }}
-        SSH_SCRIPT: ${{ inputs.ssh_script }}
+        SSH_USER: ${{ inputs.user }}
+        SSH_PORT: ${{ inputs.port }}
+        SSH_HOST: ${{ inputs.host }}
+        SSH_KEY: ${{ inputs.key }}
+        WIREGUARD_CONFIG: ${{ inputs.conf }}
+        SSH_SCRIPT: ${{ inputs.script }}

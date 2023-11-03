@@ -13,7 +13,7 @@ This action will create a WireGuard tunnel to a remote host, and then use that t
 ## Usage
 
 ```yaml
-- uses: niwee-productions/actions-ssh-wireguard@0.1
+- uses: niwee-productions/actions-ssh-wireguard@beta
   with:
     # Required: The SSH user to connect as.
     user: ""
